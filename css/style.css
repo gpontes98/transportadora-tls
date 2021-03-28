@@ -2,9 +2,7 @@
     --red-primary-color:  #D32627;
     --gray-background-color: #f5f5f5;
 }
-.slick-dots {
-    width: 90%;
-}
+
 *{
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -15,15 +13,11 @@ body{
     background-color: #f5f5f5;
 }
 
-.bg-light {
-    background-color: #f5f5f5!important;
-}
-
 body .container-fluid{
     padding: 0;
 }
 
-.line-top{
+.red-line-top{
     height: 0.25rem;
     background-color: var(--red-primary-color);
 }
@@ -52,7 +46,14 @@ body .container-fluid{
     font-size: 22px;
     font-weight: 700;
     padding-top: 0.25rem;
+    padding-bottom: 0.25rem;  
+}
+
+.container-left-image-main-top p,
+.container-right-image-main-top p{
+    padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+    margin: 0;
 }
 
 .container-left-image-main-top{
@@ -65,14 +66,13 @@ body .container-fluid{
     margin-left: 75%;
 }
 
-.container-left-image-main-top p,
-.container-right-image-main-top p{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin: 0;
-}
+
 
 /* SEÇÃO NOSSOS SERVIÇOS */
+.slick-dots {
+    width: 90%;
+}
+
 .titulo-nossos-servicos{
     text-align: center;
     font-size: 2rem;
@@ -86,11 +86,7 @@ body .container-fluid{
 }
 
 .img-servico{
-    display: flex;
-    justify-content: center;
-}
-
-.img-rounded{
+    margin: 0 auto;
     height: 200px;
     width: 200px;
     border-radius: 50%;
@@ -100,7 +96,7 @@ body .container-fluid{
     transition: opacity 1s;
 }
 
-.img-rounded:hover{
+.img-servico:hover{
     opacity: 1;
 }
 
@@ -114,7 +110,7 @@ body .container-fluid{
     margin: 1rem 0 0.5rem 0;
 }
 
-.texto-servicos{
+.texto-servico{
     text-align: center;
     padding: 0 2rem;
 }
@@ -147,15 +143,11 @@ body .container-fluid{
     .navbar-nav .nav-item .nav-link:hover{
         color: var(--red-primary-color);
     }
-
-    .servico{
-        width: 33%;
-    }
 }
 
 /* VERSÃO TELA NOTEBOOK PELO MENOS 1200PX */
 @media screen and (min-width:1200px){
-    /* AUMENTA UM POUCO A LARGURA DOS BOTÕES DO MENU*/
+    /* AUMENTA UM POUCO A LARGURA DOS BOTÕES DO MENU - PARA FICAR MAIS HARMONIOSO*/
     .nav-link{
         width: 8.5rem;
     }
@@ -175,7 +167,7 @@ body .container-fluid{
     }
 }
 
-/* VERSÃO DESKTOP ATÉ 990PX DE WIDTH*/
+/* VERSÃO DESKTOP ATÉ 990PX  - TELAS PEQUENAS E QUADRADAS*/
 @media screen and (max-width: 990px){
     .nav-item{
         background-color: var(--gray-background-color);
@@ -188,11 +180,11 @@ body .container-fluid{
         font-weight: 500;
     }
 
-    .navbar-light .navbar-toggler-icon{
+     .navbar-toggler-icon{
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(211, 38, 39, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 
-    .navbar-light .navbar-toggler{
+     .navbar-toggler{
         border-color: var(--red-primary-color);
     }
 
@@ -217,25 +209,14 @@ body .container-fluid{
     .container-right-image-main-top{
         margin-bottom: -1rem;
     }
-    .nossos-servicos{
-        flex-direction: column;
-    }
-
-    .servico{
-        margin: 0 0 1.5rem 0;
-    }
-
-    .texto-servicos{
-        padding: 0 0.5rem;
-    }
 }
 
-@media screen and (max-width:430px){
-    .navbar-light .navbar-brand {
+@media screen and (max-width:540px){
+     .navbar-brand {
         width: 70%;
     }
 
-    .navbar-light .navbar-brand img{
+     .navbar-brand img{
         width: 100%;
     }
 
@@ -251,8 +232,7 @@ body .container-fluid{
         background-image: url(../images/backgroud-header-mobile.jpg);
     }
 
-    .img-rounded{
+    .img-servico{
         opacity: 1;
     }
-
 }

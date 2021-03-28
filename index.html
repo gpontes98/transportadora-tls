@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -14,144 +15,122 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     <!--IMPORTING BOOTSTRAP-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- IMPORTING MY GLOBAL CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- MY SLICK JS -->
-    <script src="js/slick-servicos-slider.js"></script>
+    <script src="js/slick-services-slider.js"></script>
 
     <title>TLS | Transporte e Logística Silva</title>
   </head>
-</html>
-<body>
-  <header class="container-fluid">
-    <div class="line-top"></div> 
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <body>
+    
+    <header class="container-fluid">
+      <div class="red-line-top"></div> 
+
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img class="logo-navbar" src="images/logo-TLS.png" alt="TLS - Transporte e Logística Silva">
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">HOME</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVIÇOS</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">SOBRE NÓS</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">CLIENTES</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">REDES SOCIAIS</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img class="logo-navbar" src="images/logo-TLS.png" alt="">
-        </a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">HOME</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">SOBRE NÓS</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">SOBRE NÓS</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">CLIENTES</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">REDES SOCIAIS</a>
-            </li>
-          </ul>
-
+        <div class="image-main-top">     
+              <div class="container-left-image-main-top">
+                <p>CONFIANÇA</p>
+                <p>RAPIDEZ</p>
+              </div>
+  
+  
+              <div class="container-right-image-main-top">
+                <p>ECONOMIA</p>
+                <p>PRODUÇÃO</p>
+              </div>
         </div>
       </div>
-
-    </nav>
-  </header>
-
-  <div class="container">
-    <div class="image-main-top">     
-          <div class="container-left-image-main-top">
-            <p>CONFIANÇA</p>
-            <p>RAPIDEZ</p>
-          </div>
-
-
-          <div class="container-right-image-main-top">
-            <p>ECONOMIA</p>
-            <p>PRODUÇÃO</p>
-          </div>
-    </div>
-
-  </div>
- 
-    <section id="nossos-servicos">
-      <h1 class="titulo-nossos-servicos">Nossos serviços</h1>
       
-      <div class="container nossos-servicos">
+    </header>
 
-        <div class="servico">
-          <div class="img-servico">
-            <div class="img-rounded">
-            </div>
+    <main>
+      <section id="nossos-servicos">
+        
+        <h1 class="titulo-nossos-servicos">Nossos serviços</h1>
+        
+        <div class="container nossos-servicos">
+
+          <div class="servico">
+            <div class="img-servico"></div>
+            <p class="titulo-servico">Fretes e Transportes para Empresas</p>
+            <p  class="texto-servico">Serviços exclusivos para empresas</p>
           </div>
 
-          <p class="titulo-servico">Fretes e Transportes para Empresas</p>
-          <p  class="texto-servicos">
-            Serviços exclusivos para empresas
-          </p>
-        </div>
-
-        <div class="servico">
-          <div class="img-servico">
-            <div class="img-rounded">
-            </div>
+          <div class="servico">           
+            <div class="img-servico"></div>
+            <p class="titulo-servico">Carretos e Mudanças Particulares</p>
+            <p class="texto-servico">Serviços para pessoas físicas.</p>
           </div>
 
-          <div class="titulo-servico">Carretos e Mudanças Particulares</div>
-          <p class="texto-servicos">
-            Serviços para pessoas físicas.
-          </p>
-        </div>
-
-        <div class="servico">
-          <div class="img-servico">
-            <div class="img-rounded">
-            </div>
+          <div class="servico">
+            <div class="img-servico"></div>
+            <p class="titulo-servico">Frete Fracionado para Interior e Litoral de São Paulo</p>
+            <p class="texto-servico">Serviços para empresas e pessoas físicas.</p>
           </div>
 
-          <p class="titulo-servico">Frete Fracionado para Interior e Litoral de São Paulo</p>
-          <p class="texto-servicos">
-            Serviços para empresas e pessoas físicas.
-          </p>
         </div>
 
-      </div>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-    </section>
+      </section>
+    </main>
 
-    <section id="quem-somos">
+    <footer class="container-fluid">
       <div class="container">
+        <div class="footer-left">
 
+        </div>
+
+        <div class="footer-right">
+
+        </div>
       </div>
-    </section>
+    </footer>
 
-  <footer class="container-flex">
-    <div class="container">
-      <div class="footer-left">
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
-      </div>
+  </body>
 
-      <div class="footer-right">
-
-      </div>
-    </div>
-  </footer>
-
-
-</body>
 </html>
