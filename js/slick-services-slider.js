@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.nossos-servicos').slick({
+    $('.services').slick({
         dots: true,
         arrows:false,
         infinite: true,
