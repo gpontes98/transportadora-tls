@@ -34,7 +34,7 @@
   <body>
     
     <header class="container-fluid">
-      <div class="red-line-top"></div> 
+      <div class="redLine"></div> 
 
       <nav class="navbar navbar-expand-lg">
         <div class="container">
@@ -74,14 +74,14 @@
       </nav>
 
       <div class="container">
-        <div class="image-main-top">     
-              <div class="container-left-image-main-top">
+        <div class="imageMainTop">     
+              <div class="cardOne">
                 <p>CONFIANÇA</p>
                 <p>RAPIDEZ</p>
               </div>
   
   
-              <div class="container-right-image-main-top">
+              <div class="cardTwo">
                 <p>ECONOMIA</p>
                 <p>PRODUÇÃO</p>
               </div>
@@ -91,34 +91,73 @@
     </header>
 
     <main>
-      <section id="nossos-servicos">
+      <section id="services">
         
-        <h1 class="titulo-nossos-servicos">Nossos serviços</h1>
+        <h1 class="titleDefault">Nossos serviços</h1>
         
-        <div class="container nossos-servicos">
+        <div class="container services">
 
-          <div class="servico">
-            <div class="img-servico"></div>
-            <p class="titulo-servico">Fretes e Transportes para Empresas</p>
-            <p  class="texto-servico">Serviços exclusivos para empresas</p>
+          <div>
+            <div class="imgService"></div>
+            <p class="titleService">Fretes e Transportes para Empresas</p>
+            <p  class="textService">Serviços exclusivos para empresas</p>
           </div>
 
-          <div class="servico">           
-            <div class="img-servico"></div>
-            <p class="titulo-servico">Carretos e Mudanças Particulares</p>
-            <p class="texto-servico">Serviços para pessoas físicas.</p>
+          <div>           
+            <div class="imgService"></div>
+            <p class="titleService">Carretos e Mudanças Particulares</p>
+            <p class="textService">Serviços para pessoas físicas.</p>
           </div>
 
-          <div class="servico">
-            <div class="img-servico"></div>
-            <p class="titulo-servico">Frete Fracionado para Interior e Litoral de São Paulo</p>
-            <p class="texto-servico">Serviços para empresas e pessoas físicas.</p>
+          <div>
+            <div class="imgService"></div>
+            <p class="titleService">Frete Fracionado para Interior e Litoral de São Paulo</p>
+            <p class="textService">Serviços para empresas e pessoas físicas.</p>
           </div>
 
         </div>
 
       </section>
     </main>
+    <section id="contact">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form action="" class="formContact">
+              <h1 class="titleDefault">Entre em contato conosco!</h1>
+              <div class="form-group">
+                <label for="">Nome:</label>
+                <input id="" type="text" class="form-control" aria-describedby="NomeContato" placeholder="Seu nome">
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12 col-md-6 form-group">
+                  <label for="">E-mail:</label>
+                  <input id="" type="email" class="form-control" aria-describedby="emailContato" placeholder="email@email.com">
+                </div>
+
+                <div class="col-sm-12 col-md-6 form-group">
+                  <label for="">Telefone:</label>
+                  <input type="tel" id="" class="form-control">            
+                </div>
+              </div>
+
+
+              <div class="form-group">
+                <label for="">Mensagem:</label>
+                <textarea class="form-control" id="" rows="3"></textarea>
+                <small class="form-text text-muted">Não se preocupe, seus dados estão protegidos!</small>
+              </div>
+              
+
+              <input type="submit" class="btn btn-success"/> <input type="reset" class="btn btn-secondary">
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
     <footer>
       <div class="footer-basic">
@@ -140,7 +179,7 @@
 
       </div>
 
-      <div class="red-line-top"></div>
+      <div class="redLine"></div>
     </footer>
 
     <script src="slick/slick.min.js"></script>

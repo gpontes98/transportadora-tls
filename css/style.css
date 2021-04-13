@@ -1,6 +1,7 @@
 :root{
     --red-primary-color:  #D32627;
     --gray-background-color: #f5f5f5;
+    --main-font-color: rgb(78, 78, 78);
 }
 
 *{
@@ -10,19 +11,19 @@
 }
 
 body{
-    background-color: #f5f5f5;
+    background-color: var(--gray-background-color);
 }
 
 body .container-fluid{
     padding: 0;
 }
 
-.red-line-top{
+.redLine{
     height: 0.25rem;
     background-color: var(--red-primary-color);
 }
 
-.image-main-top{
+.imageMainTop{
     margin-top: 0.5rem;
     width: 100%;
     display: flex;
@@ -35,8 +36,8 @@ body .container-fluid{
     margin-bottom: 5rem;
 }
 
-.container-left-image-main-top,
-.container-right-image-main-top{
+.cardOne,
+.cardTwo{
     flex-direction: column;
     background-color: var(--red-primary-color);
     width: 200px;
@@ -49,19 +50,19 @@ body .container-fluid{
     padding-bottom: 0.25rem;  
 }
 
-.container-left-image-main-top p,
-.container-right-image-main-top p{
+.cardOne p,
+.cardTwo p{
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     margin: 0;
 }
 
-.container-left-image-main-top{
+.cardOne{
     margin-top: 2.55rem;
     margin-left: 7%;
 }
 
-.container-right-image-main-top{
+.cardTwo{
     margin-bottom: 5rem;
     margin-left: 75%;
 }
@@ -72,20 +73,21 @@ body .container-fluid{
     width: 90%;
 }
 
-.titulo-nossos-servicos{
+.titleDefault{
     text-align: center;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
+    color:var(--main-font-color);
 }
 
-.nossos-servicos{
+.services{
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 2rem;
 }
 
-.img-servico{
+.imgService{
     margin: 0 auto;
     height: 200px;
     width: 200px;
@@ -96,11 +98,11 @@ body .container-fluid{
     transition: opacity 1s;
 }
 
-.img-servico:hover{
+.imgService:hover{
     opacity: 1;
 }
 
-.titulo-servico{
+.titleService{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -109,11 +111,13 @@ body .container-fluid{
     height: 5rem;
     margin: 1rem 0 0.5rem 0;
     padding: 0 1rem;
+    color: var(--main-font-color);
 }
 
-.texto-servico{
+.textService{
     text-align: center;
     padding: 0 2rem;
+    color: var(--main-font-color);
 }
 
 
@@ -180,6 +184,22 @@ body .container-fluid{
   
   /* Credit to https://epicbootstrap.com/snippets/footer-basic */
 
+
+#contact{
+    margin: 5rem 0;
+}
+
+#contact h2{
+    font-size: 24px;
+    color: #525252;
+    text-align: center;
+}
+
+.formContact{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 /* TAMANHO MINIMO VERSÃO DESKTOP */
 @media screen and (min-width: 991px){
 
@@ -222,7 +242,7 @@ body .container-fluid{
 /* VERSÃO TELA DESKTOP PELO MENOS 1400PX*/
 @media screen and (min-width:1400px){
     /* AUMENTA A ALTURA DA IMG PRINCIPAL*/
-    .image-main-top{
+    .imageMainTop{
         height: 500px;
     }
 
@@ -253,25 +273,25 @@ body .container-fluid{
         border-color: var(--red-primary-color);
     }
 
-    .image-main-top{
+    .imageMainTop{
         margin-top: 2rem;
         height: 300px;
     }
 
-    .container-left-image-main-top,
-    .container-right-image-main-top{
+    .cardOne,
+    .cardTwo{
         width: 130px;
         padding-top: 0.05rem;
         padding-bottom: 0.05rem;
         font-size: 16px;
     }
 
-    .container-left-image-main-top{
+    .cardOne{
         margin-top: -1rem;
         margin-left: 7%;
     }
 
-    .container-right-image-main-top{
+    .cardTwo{
         margin-bottom: -1rem;
     }
 }
@@ -286,12 +306,12 @@ body .container-fluid{
     }
 
 
-    .container-left-image-main-top,
-    .container-right-image-main-top{
+    .cardOne,
+    .cardTwo{
         display: none;
     }
 
-    .image-main-top{
+    .imageMainTop{
         margin: 0.5rem auto 2rem auto;
         height: 175px;
         background-image: url(../images/backgroud-header-mobile.jpg);
