@@ -15,10 +15,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
     <!--IMPORTING BOOTSTRAP-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">    
 
     <!-- IMPORTING ICONS FROM AJAX -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -28,8 +25,6 @@
 
     <!-- IMPORTING MY GLOBAL CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- MY SLICK JS -->
-    <script src="js/slick-services-slider.js"></script>
 
     <title>TLS | Transporte e Logística Silva</title>
   </head>
@@ -41,7 +36,7 @@
 
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="./index.html">
             <img class="logo-navbar" src="images/logo-TLS.png" alt="TLS - Transporte e Logística Silva">
           </a>
           
@@ -131,7 +126,7 @@
               <h1 class="titleDefault">Entre em contato conosco!</h1>
               <div class="form-group">
                 <label for="">Nome:</label>
-                <input id="" type="text" class="form-control" aria-describedby="NomeContato" placeholder="Seu nome">
+                <input id="" type="text" class="form-control" aria-describedby="NomeContato" placeholder="Seu nome" required>
               </div>
 
               <div class="row">
@@ -142,14 +137,14 @@
 
                 <div class="col-sm-12 col-md-6 form-group">
                   <label for="">Telefone:</label>
-                  <input type="tel" id="" class="form-control">            
+                  <input type="tel" id="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>            
                 </div>
               </div>
 
 
               <div class="form-group">
                 <label for="">Mensagem:</label>
-                <textarea class="form-control" id="" rows="3"></textarea>
+                <textarea class="form-control" id="" rows="3" required>Olá, gostaria de receber um orçamento!</textarea>
                 <small class="form-text text-muted">Não se preocupe, seus dados estão protegidos!</small>
               </div>
               
@@ -205,6 +200,30 @@
 
       <div class="redLine"></div>
     </footer>
+    <!-- IMPORTING BOOTSTRAP JS-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+
+    <!-- MY SLICK JS -->
+    <script src="js/slick-services-slider.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script>
+      jQuery("input#telefone")
+        .mask("(99) 9999-9999?9")
+        .focusout(function (event) {  
+            var target, phone, element;  
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+            phone = target.value.replace(/\D/g, '');
+            element = $(target);  
+            element.unmask();  
+            if(phone.length > 10) {  
+                element.mask("(99) 99999-999?9");  
+            } else {  
+                element.mask("(99) 9999-9999?9");  
+            }  
+        });
+    </script>
 
     <script src="slick/slick.min.js"></script>
 
