@@ -120,17 +120,17 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <form action="/sendmail" method="POST" class="formContact">
+            <form class="formContact">
               <h1 class="titleDefault">Entre em contato conosco!</h1>
               <div class="form-group">
                 <label for="">Nome:</label>
-                <input id="" name="nome" type="text" class="form-control" aria-describedby="NomeContato" placeholder="Seu nome" required>
+                <input id="nome" name="nome" type="text" class="form-control" aria-describedby="NomeContato" placeholder="Seu nome" required>
               </div>
 
               <div class="row">
                 <div class="col-sm-12 col-md-6 form-group">
                   <label for="">E-mail:</label>
-                  <input id="" name="email" type="email" class="form-control" aria-describedby="emailContato" placeholder="email@email.com">
+                  <input id="email" name="email" type="email" class="form-control" aria-describedby="emailContato" placeholder="email@email.com">
                 </div>
 
                 <div class="col-sm-12 col-md-6 form-group">
@@ -142,12 +142,12 @@
 
               <div class="form-group">
                 <label for="">Mensagem:</label>
-                <textarea class="form-control" id="" name="mensagem" rows="3" required>Olá, gostaria de receber um orçamento!</textarea>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required>Olá, gostaria de receber um orçamento!</textarea>
                 <small class="form-text text-muted">Não se preocupe, seus dados estão protegidos!</small>
               </div>
               
 
-              <input type="submit" class="btn btn-success"/> <input type="reset" class="btn btn-secondary">
+              <input type="submit" onclick="sendMail()" class="btn btn-success"/> <input type="reset" class="btn btn-secondary">
             </form>
           </div>
         </div>
@@ -207,6 +207,37 @@
     <script src="./js/masksForm.js"></script>
 
     <script src="./slick/slick.min.js"></script>
+
+    <script>
+     
+      function sendMail() {
+          let nome = 'gabriel';//document.getElementById('nome').value;
+          let email = 'gabriel@email.com';//document.getElementById('email').value;
+          let telefone = '11 2704-8748';//document.getElementById('telefone').value;
+          let mensagem = 'Oi teste';//document.getElementById('mensagem').value;
+          
+          fetch('/sendmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' 
+              },
+            body: JSON.stringify(
+              { 
+                nome,
+                email,
+                telefone,
+                mensagem 
+              })
+          }).then(response => {
+            if(response.status === 200){
+              alert("Mensagem enviada com sucesso!")
+            }
+          }).catch(err=>{
+            console.log(err);
+            alert("Houve um erro, por gentileza, entre em contato através do Whatsapp e nos informe, obrigado!" + err);
+          })
+        }
+    </script>
 
   </body>
 
