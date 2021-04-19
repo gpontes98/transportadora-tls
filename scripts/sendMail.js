@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-export default async function sendMail(nome, email, telefone, mensagem){
+export default function sendMail(nome, email, telefone, mensagem){
     let transporter = nodemailer.createTransport({ 
       service: 'gmail', 
       auth: { 
@@ -20,7 +20,7 @@ export default async function sendMail(nome, email, telefone, mensagem){
       <p>Mensagem: ${mensagem}</p>`// plain text body
   };
 
-  await transporter.sendMail(mailOptions, (err, info) => {
+  transporter.sendMail(mailOptions, (err, info) => {
       if(err)
         console.log(err);
       else

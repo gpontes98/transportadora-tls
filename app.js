@@ -10,10 +10,10 @@ app.use(bodyParser.json())
 
 
 app.get("/", function(req, res){
-    res.sendFile(__dirname + "/src/public.html");
+    res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/sendmail", function(req,res){
+app.post("/sendmail", async function(req,res){
     const nome = req.body.nome;
     const email = req.body.email;
     const telefone = req.body.telefone;
