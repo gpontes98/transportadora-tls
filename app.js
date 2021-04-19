@@ -12,7 +12,7 @@ app.get("/", function(req, res){
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/sendmail", async function(req,res){    
+app.post("/sendmail", function(req,res){    
     let transporter = nodemailer.createTransport({ 
         service: 'gmail', 
         auth: { 
