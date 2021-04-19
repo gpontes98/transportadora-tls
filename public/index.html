@@ -120,7 +120,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <form class="formContact">
+            <form class="formContact" action=javascript:sendMail() id="formContact">
               <h1 class="titleDefault">Entre em contato conosco!</h1>
               <div class="form-group">
                 <label for="">Nome:</label>
@@ -144,10 +144,11 @@
                 <label for="">Mensagem:</label>
                 <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required>Olá, gostaria de receber um orçamento!</textarea>
                 <small class="form-text text-muted">Não se preocupe, seus dados estão protegidos!</small>
+                <span id="msgSendForm"></span>
               </div>
               
 
-              <input type="submit" onclick="sendMail()" class="btn btn-success"/> <input type="reset" class="btn btn-secondary">
+              <input type="submit" class="btn btn-success"/> <input type="reset" class="btn btn-secondary">
             </form>
           </div>
         </div>
@@ -211,12 +212,15 @@
     <script>
      
       function sendMail() {
-          let nome = 'gabriel';//document.getElementById('nome').value;
-          let email = 'gabriel@email.com';//document.getElementById('email').value;
-          let telefone = '11 2704-8748';//document.getElementById('telefone').value;
-          let mensagem = 'Oi teste';//document.getElementById('mensagem').value;
+          let msgSendForm = 'Enviando...';
+          document.getElementById('msgSendForm').innerHTML = msgSendForm;
+
+          let nome = document.getElementById('nome').value;
+          let email = document.getElementById('email').value;
+          let telefone = document.getElementById('telefone').value;
+          let mensagem = document.getElementById('mensagem').value;
           
-          fetch('/sendmail', {
+          fetch('http://localhost:3001/sendmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' 
@@ -230,12 +234,16 @@
               })
           }).then(response => {
             if(response.status === 200){
-              alert("Mensagem enviada com sucesso!")
+              document.getElementById('msgSendForm').innerHTML = `<span style='color:#00b51e; font-weight:600'>Obrigado por sua mensagem, entraremos em contato o mais breve possível!<span>`;
+              document.getElementById('formContact').reset();
+            }else{
+              document.getElementById('msgSendForm').innerHTML = `<span style='color:#ff0000; font-weight:600'>Ops... houve um erro, por gentileza, entre em contato através do Whatsapp, obrigado! Erro: ${response.status}</span>`;
             }
           }).catch(err=>{
-            console.log(err);
-            alert("Houve um erro, por gentileza, entre em contato através do Whatsapp e nos informe, obrigado!" + err);
+            document.getElementById('msgSendForm').innerHTML = `<span style='color:#ff0000; font-weight:600'>Ops... houve um erro, por gentileza, entre em contato através do Whatsapp, obrigado! Erro: ${err}</span>`;
           })
+
+          
         }
     </script>
 

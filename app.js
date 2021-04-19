@@ -7,22 +7,22 @@ app.use(express.static('public'));
 app.use(express.json());
 
 
-app.get("/", function(req, res){
+app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
 
-app.post("/sendmail", function(req, res){
+app.post("/sendmail", (req, res) =>{
     const { nome, email, telefone, mensagem} = req.body;
     sendMail(nome, email, telefone, mensagem)
     .then(response =>{
         if(response === false){
-            return false;
+            res.status(400).send();
         }else{
-            res.send();
+            res.status(200).send();
         }
     })
     .catch(err=>{
-        return false;
+        res.status(500).send();
     })
 })
 
