@@ -11,8 +11,8 @@ exports.send = (nome, email, telefone, mensagem) => {
         });
 
         var mailOptions = {          
-                from: 'gabrielpontes98@gmail.com',
-                to: 'gabrielpontes98@gmail.com',
+                from: 'tls.transportes@outlook.com',
+                to: 'tls.transportes@outlook.com',
                 subject: 'Contato TLS',
                 html: `
                 <p>Nome: ${nome}</p>
