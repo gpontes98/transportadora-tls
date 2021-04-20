@@ -7,7 +7,7 @@ function sendMail() {
     let telefone = document.getElementById('telefone').value;
     let mensagem = document.getElementById('mensagem').value;
     
-    fetch('http://localhost:3000/sendmail', {
+    fetch('/sendmail', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json' 
