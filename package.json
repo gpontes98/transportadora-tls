@@ -2,6 +2,7 @@
   "name": "public",
   "version": "1.0.0",
   "description": "",
+  "main": "./src/app.js",
   "scripts": {
     "dev": "nodemon ./src/app.js"
   },
