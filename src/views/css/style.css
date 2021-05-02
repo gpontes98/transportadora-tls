@@ -18,11 +18,29 @@ body .container-fluid{
     padding: 0;
 }
 
+section{
+    margin: 5rem 0;
+}
+
 .redLine{
     height: 0.25rem;
     background-color: var(--red-primary-color);
 }
 
+.slick-dots {
+    width: 90%;
+}
+
+.titleDefault{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color:var(--main-font-color);
+    margin-bottom: 1.25rem;
+}
+
+
+/* SEÇÃO HEADER COM IMAGEM PRINCIPAL */
 .imageMainTop{
     margin-top: 0.5rem;
     width: 100%;
@@ -67,128 +85,29 @@ body .container-fluid{
     margin-left: 75%;
 }
 
-
-/* SEÇÃO NOSSOS SERVIÇOS */
-.slick-dots {
-    width: 90%;
+/* SEÇÃO SOBRE NÓS */
+#aboutUs .titleDefault{
+    text-align: right;
 }
 
-.titleDefault{
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
-    color:var(--main-font-color);
-}
 
-.services{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-.imgService{
-    margin: 0 auto;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    background-image:url('../images/rodovia.jpg'); 
-    background-position: center;
-    opacity: 0.5;
-    transition: opacity 1s;
-}
-
-.imgService:hover{
-    opacity: 1;
-}
-
-.titleService{
+/*SEÇÃO CLIENTES*/
+#clients .container .row .col{
     display: flex;
     justify-content: center;
-    text-align: center;
     align-items: center;
-    font-size: 1.5rem;
-    height: 5rem;
-    margin: 1rem 0 0.5rem 0;
-    padding: 0 1rem;
-    color: var(--main-font-color);
 }
 
-.textService{
-    text-align: center;
-    padding: 0 2rem;
-    color: var(--main-font-color);
+/* SEÇÃO DEPOIMENTOS */
+.testimonialImg{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url('../images/depoimentos/gabriel.jpg');
+    background-position: center;
 }
 
-
-/* SEÇÃO DO FOOTER - USANDO FOOTER BASIC DO BOOTSTRAP*/
-.footer-basic {
-    padding:40px 0;
-    background-color:#ffffff;
-    color:#4b4c4d;
-  }
-  
-  .footer-basic ul {
-    padding:0;
-    list-style:none;
-    text-align:center;
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:0;
-  }
-  
-  .footer-basic li {
-    padding:0 10px;
-  }
-  
-  .footer-basic ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
-  .footer-basic ul a:hover {
-    opacity:1;
-  }
-  
-  .footer-basic .social {
-    text-align:center;
-    padding-bottom:25px;
-  }
-  
-  .footer-basic .social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin:0 8px;
-    color:inherit;
-    opacity:0.75;
-  }
-  
-  .footer-basic .social > a:hover {
-    opacity:0.9;
-  }
-  
-  .footer-basic .copyright {
-    margin-top:15px;
-    text-align:center;
-    font-size:13px;
-    color:#aaa;
-    margin-bottom:0;
-  }
-  
-  /* Credit to https://epicbootstrap.com/snippets/footer-basic */
-
-
-#contact{
-    margin: 5rem 0;
-}
-
+/* FORMULÁRIO DE CONTATO */
 #contact h2{
     font-size: 24px;
     color: #525252;
@@ -199,7 +118,6 @@ body .container-fluid{
     max-width: 700px;
     margin: 0 auto;
 }
-
 
 /* TAMANHO MINIMO VERSÃO DESKTOP */
 @media screen and (min-width: 991px){
