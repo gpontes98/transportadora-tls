@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     background-color: var(--gray-background-color);
 }
@@ -27,9 +31,6 @@ section{
     background-color: var(--red-primary-color);
 }
 
-.slick-dots {
-    width: 90%;
-}
 
 .titleDefault{
     text-align: center;
@@ -86,8 +87,17 @@ section{
 }
 
 /* SEÇÃO SOBRE NÓS */
+.colAboutUs{
+    text-align: right;
+}
+
 #aboutUs .titleDefault{
     text-align: right;
+}
+
+
+.colAboutUsImg img{
+    border-radius: 15px;
 }
 
 
@@ -99,13 +109,30 @@ section{
 }
 
 /* SEÇÃO DEPOIMENTOS */
+.slick-initialized .slick-slide {
+    display: flex;
+}
+
+.testimonial{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.testimonial p{
+    width: 70%;
+    text-align: left;
+}
+
 .testimonialImg{
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-image: url('../images/depoimentos/gabriel.jpg');
     background-position: center;
+    box-sizing: border-box;
 }
+
 
 /* FORMULÁRIO DE CONTATO */
 #contact h2{
@@ -236,7 +263,33 @@ section{
         background-image: url(../images/backgroud-header-mobile.jpg);
     }
 
-    .imgService{
-        opacity: 1;
+    .colAboutUs{
+        text-align: center;
+    }
+    
+    .colAboutUsImg{
+        display: flex;
+        justify-content: center;
+    }
+
+    .colAboutUsImg img{
+        width: 330px;
+    }
+
+    #aboutUs .titleDefault{
+        text-align: center;
+    }
+
+    #clients img{
+        margin-top: 50px;
+    }
+
+    .testimonial{
+        flex-direction: column;
+    }
+
+    .testimonial p{
+        margin-top: 25px;
+        text-align: center;
     }
 }
