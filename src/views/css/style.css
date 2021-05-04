@@ -242,7 +242,7 @@ section{
     }
 }
 
-@media screen and (max-width:540px){
+@media screen and (max-width:760px){
      .navbar-brand {
         width: 70%;
     }
@@ -275,6 +275,7 @@ section{
 
     .colAboutUsImg img{
         width: 330px;
+        height: 247.47px;
     }
 
     #aboutUs .titleDefault{
