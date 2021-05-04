@@ -264,6 +264,7 @@ section{
     }
 
     .colAboutUs{
+        padding: 0 2rem;
         text-align: center;
     }
     
@@ -289,7 +290,12 @@ section{
     }
 
     .testimonial p{
+        width: 90%;
         margin-top: 25px;
         text-align: center;
+    }
+
+    .formContact{
+        padding: 0 2rem;
     }
 }
