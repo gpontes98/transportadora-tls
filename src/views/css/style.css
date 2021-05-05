@@ -243,6 +243,10 @@ section{
 }
 
 @media screen and (max-width:760px){
+    section{
+        margin-top: 0;
+    }
+
      .navbar-brand {
         width: 70%;
     }
