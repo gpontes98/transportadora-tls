@@ -16,6 +16,8 @@ html {
 
 body{
     background-color: var(--gray-background-color);
+    border-top: 0.25rem solid var(--red-primary-color);
+    border-bottom: 0.25rem solid var(--red-primary-color);
 }
 
 body .container-fluid{
@@ -26,9 +28,8 @@ section{
     margin: 5rem 0;
 }
 
-.redLine{
-    height: 0.25rem;
-    background-color: var(--red-primary-color);
+section:nth-last-of-type(1){
+    margin-bottom: 2rem;
 }
 
 
@@ -54,39 +55,7 @@ section{
     background-position: center;
     margin-bottom: 2.5rem;
 }
-/*
-.cardOne,
-.cardTwo{
-    flex-direction: column;
-    background-color: var(--red-primary-color);
-    width: 200px;
-    transform: skew(-18deg);
-    color: #ffffff;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 700;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;  
-}
 
-.cardOne p,
-.cardTwo p{
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin: 0;
-}
-
-.cardOne{
-    margin-top: -.5rem;
-    margin-left: 10%;
-}
-
-.cardTwo{
-    margin-bottom: -.5rem;
-    margin-left: 80%;
-}
-
-*/
 
 /* SEÇÃO SOBRE NÓS */
 .colAboutUs{
@@ -254,24 +223,7 @@ section{
         margin-top: 2rem;
         height: 300px;
     }
-    /*
-    .cardOne,
-    .cardTwo{
-        width: 130px;
-        padding-top: 0.05rem;
-        padding-bottom: 0.05rem;
-        font-size: 16px;
-    }
 
-    .cardOne{
-        margin-top: -1rem;
-        margin-left: 7%;
-    }
-
-    .cardTwo{
-        margin-bottom: -1rem;
-    }
-    */
 }
 
 @media screen and (max-width:760px){
@@ -286,13 +238,6 @@ section{
      .navbar-brand img{
         width: 100%;
     }
-
-    /*
-    .cardOne,
-    .cardTwo{
-        display: none;
-    }
-    */
 
     .imageMainTop{
         margin: 0.5rem auto 2rem auto;
