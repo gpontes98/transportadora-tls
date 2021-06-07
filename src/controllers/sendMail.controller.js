@@ -5,8 +5,8 @@ exports.send = (nome, email, telefone, mensagem) => {
         let transporter = nodemailer.createTransport({
             service: 'gmail', 
             auth: { 
-                user: 'transporteelogisticasilva@gmail.com', 
-                pass: 'tlsilva21' 
+                user: process.env.SEND_MAIL, 
+                pass: process.env.SEND_PASS
                 } 
         });
 
